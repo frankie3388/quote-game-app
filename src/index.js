@@ -7,6 +7,7 @@ import ApiProvider from './context/ApiContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
+import Gamepage from './pages/Gamepage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +23,7 @@ root.render(
         <Route path="/" element={<Homepage />} />
 
         {/* Gamepage route */}
-        {/* <Route path="/gamepage" element={<Gamepage />} /> */}
+        <Route path="/gamepage" element={<Gamepage />} />
       </Routes>
       
       </BrowserRouter>
