@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApiProvider from './context/ApiContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
+import Gamepage from './pages/Gamepage';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +26,7 @@ root.render(
         <Route path="/" element={<Homepage />} />
 
         {/* Gamepage route */}
-        {/* <Route path="/gamepage" element={<Gamepage />} /> */}
+        <Route path="/gamepage" element={<Gamepage />} />
       </Routes>
       
       </BrowserRouter>
