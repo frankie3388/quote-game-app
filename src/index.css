@@ -23,12 +23,13 @@ code {
 
   text-align: center;
   margin: auto;
-  margin-top: 25vh;
+  margin-top: 5vh;
   background: #56b04b;
   color: white;
   width: 80%;
   border-radius: 20px;
   box-shadow: 5px 10px 18px black;
+  padding: 10px;
 }
 
 .navbar {
@@ -86,4 +87,11 @@ li {
 
 .message {
   margin-top: 60px;
+}
+
+.gameName {
+  color: white;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: Helvetica;
 }

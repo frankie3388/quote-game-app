@@ -36,8 +36,9 @@ export default function Homepage(){
                 the name must be all in lower case and a dash must be 
                 used instead of a space. Example: bruce-lee
             </h6>
+            <h1 className="gameName" >Welcome to Finish the Quote Game</h1>
             <div className="intro">
-                <h1>Welcome to Finish the Quote Game</h1>
+                
                 <h2>"
                     {
                     quoteData.toggleDisplay ? quoteData.quote : apiResult.content
