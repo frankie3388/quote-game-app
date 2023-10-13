@@ -3,6 +3,10 @@
 This is a quote game application. The home page displays a random quote upon loading. You can search for a quote by a famous person on the homepage.  
 On the Game Page of the application, a random quote is displayed with a missing word. You are to enter in the missing word. You can also, generate a new quote by clicking on the "Generate new quote" button.
 
+## Deployed site Link
+
+[Quote Game App](https://lucent-conkies-bb05c9.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
