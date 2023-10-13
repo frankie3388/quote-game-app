@@ -56,7 +56,7 @@ export default function GameQuoteDisplay() {
     // This function checks if you have entered the correct word in.
     const handleSubmit = (event) => {
         console.log(input);
-        if (input == missingWord.toString()) {
+        if (input === missingWord.toString()) {
             alert("your are correct")
         }
         else {
@@ -94,7 +94,6 @@ export default function GameQuoteDisplay() {
                         Submit
                     </Button>{' '}
                     </blockquote>
-
                 </Card.Body>
             </Card>
             

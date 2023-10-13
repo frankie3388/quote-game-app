@@ -55,6 +55,7 @@ li {
 
 .game-quote {
   text-align: center;
+  margin-top: 70px;
 }
 
 .new-quote-button {
@@ -76,4 +77,13 @@ li {
 .quote-header {
   font-size: 2.5rem;
   font-weight: bold;
+}
+
+.search-bar {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.message {
+  margin-top: 60px;
 }

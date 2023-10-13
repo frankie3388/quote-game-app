@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import Gamepage from './pages/Gamepage';
+import QuoteByAuthorProvider from './context/QuoteByAuthorContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -16,21 +17,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ApiProvider>
+      <QuoteByAuthorProvider>
 
 
-      <BrowserRouter>
-        <Navbar />
+        <BrowserRouter>
+          <Navbar />
 
-      <Routes>
-        {/* Homepage route */}
-        <Route path="/" element={<Homepage />} />
+        <Routes>
+          {/* Homepage route */}
+          <Route path="/" element={<Homepage />} />
 
-        {/* Gamepage route */}
-        <Route path="/gamepage" element={<Gamepage />} />
-      </Routes>
-      
-      </BrowserRouter>
-      
+          {/* Gamepage route */}
+          <Route path="/gamepage" element={<Gamepage />} />
+        </Routes>
+        
+        </BrowserRouter>
+      </QuoteByAuthorProvider>
     </ApiProvider>
   
   </React.StrictMode>
