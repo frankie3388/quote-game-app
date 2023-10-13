@@ -1,5 +1,8 @@
 import { useContext, useState, useEffect } from 'react'; 
 import { ApiContext } from '../context/ApiContext';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 export default function GameQuoteDisplay() {
 
@@ -11,9 +14,12 @@ export default function GameQuoteDisplay() {
 
     const [input, setInput] = useState("")
 
-    useEffect(() => {
+    const [author, setAuthor] = useState("")
 
-        
+    const [generateQuote, setgenerateQuote] = useState(0)
+
+
+    useEffect(() => {
         async function randomQuote() {
             // call random quote from API
             let response = await fetch(api + 'quotes/random')
@@ -27,8 +33,8 @@ export default function GameQuoteDisplay() {
             // Get a random index number based on the length of the string array.
             let randomWordToRemoveIndex = Math.floor(Math.random() * splitString.length)
 
-            // Filter the random word from the string array
-            let randomWordToRemove = splitString.filter(word => word == splitString[randomWordToRemoveIndex])
+            // Slice the random word from the string array
+            let randomWordToRemove = splitString.slice(randomWordToRemoveIndex, randomWordToRemoveIndex + 1)
 
             // convert the splitString (array) into a String.
             let convertArrayToString = splitString.join(' ')
@@ -39,13 +45,15 @@ export default function GameQuoteDisplay() {
             // set state
             setQuote(replaceWordWithSpace)
             setMissingWord(randomWordToRemove)
+            setAuthor(responseData[0].author)
             
         }
 
         randomQuote();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [generateQuote])
 
+    // This function checks if you have entered the correct word in.
     const handleSubmit = (event) => {
         console.log(input);
         if (input == missingWord.toString()) {
@@ -59,18 +67,36 @@ export default function GameQuoteDisplay() {
 
     return (
         <div className="game-quote">
-            <h1>Quote</h1>
-            <h2>{quote}</h2>
-            <label>Enter missing word here: </label>
-            <input 
-                type="text" 
-                name="guessQuote" 
-                id="guessQuote" 
-                onChange={(event) => setInput(event.target.value)}/>
-            <button onClick={handleSubmit} >Submit</button>
-            
-            
-            
+            <Button 
+            onClick={() => setgenerateQuote(generateQuote + 1)} 
+            variant="success"
+            className="new-quote-button">
+                Generate New Quote
+            </Button>{' '}
+            <Card className="game-quote-display">
+                <Card.Header className="quote-header">Quote</Card.Header>
+                <Card.Body>
+                    <blockquote className="blockquote mb-0">
+                    <p>
+                        {' '}
+                        {quote}{' '}
+                    </p>
+                    <footer className="blockquote-footer">
+                        Author: <cite title="Source Title">{author}</cite>
+                    </footer>
+                    <label>Enter missing word here: </label>
+                    <input 
+                        type="text" 
+                        name="guessQuote" 
+                        id="guessQuote" 
+                        onChange={(event) => setInput(event.target.value)}/>
+                    <Button className="submit-quote-button" onClick={handleSubmit} variant="secondary">
+                        Submit
+                    </Button>{' '}
+                    </blockquote>
+
+                </Card.Body>
+            </Card>
             
         </div>
     )

@@ -32,6 +32,7 @@ export default function Homepage(){
             <div>
                 <h3>How to play the game</h3>
                 <ul>
+                    <li>Go to Game page.</li>
                     <li>Type in the words that you think make up the quote, then click on submit to check your answer.</li>
                 </ul>
             </div>
