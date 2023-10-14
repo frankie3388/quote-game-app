@@ -29,6 +29,7 @@ export default function SearchQuote() {
                 // toggle display for homepage (random quote or searched quote)
                 let toggleDisplay = toggle
 
+                // sets the QuoteByAuthorContext data object.
                 setQuoteData({quote, author, toggleDisplay});
             }
             catch (error) {

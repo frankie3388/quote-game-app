@@ -60,7 +60,7 @@ export default function GameQuoteDisplay() {
             alert("your are correct")
         }
         else {
-            alert("you are wrong, try again.")
+            alert(`You are wrong. The missing word is "${missingWord.toString()}"`)
         }
     }
     
