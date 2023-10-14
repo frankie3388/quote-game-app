@@ -7,6 +7,10 @@ On the Game Page of the application, a random quote is displayed with a missing 
 
 [Quote Game App](https://lucent-conkies-bb05c9.netlify.app/)
 
+## Video Presentation Link
+
+[Video presentation](https://youtu.be/MPExpk_8Aeo)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
