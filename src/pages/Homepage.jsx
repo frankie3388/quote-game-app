@@ -30,12 +30,7 @@ export default function Homepage(){
     
     return (
         <div className="homepage">
-            <h6 className="message">
-                Search function only works in the homepage. 
-                Also, if you want to search for a quote by a famous person, 
-                the name must be all in lower case and a dash must be 
-                used instead of a space. Example: bruce-lee
-            </h6>
+            
             <h1 className="gameName" >Welcome to Finish the Quote Game</h1>
             <div className="intro">
                 
@@ -51,14 +46,21 @@ export default function Homepage(){
                     }
                 </h3>
             </div>
-            <div>
+            <div className="how-to-play">
                 <h3>How to play the game</h3>
                 <ul>
                     <li>Go to Game page.</li>
                     <li>Type in the words that you think make up the quote, then click on submit to check your answer.</li>
                 </ul>
+
+            <h6 className="message">
+                Search function only works in the homepage. 
+                Also, if you want to search for a quote by a famous person, 
+                the name must be all in lower case and a dash must be 
+                used instead of a space. Example: bruce-lee
+            </h6>
             </div>
-            {/* <h1>{quoteData.quote}</h1> */}
+            
             
             
         </div>
