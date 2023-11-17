@@ -2,6 +2,7 @@
 
 This is a quote game application. The home page displays a random quote upon loading. You can search for a quote by a famous person on the homepage.  
 On the Game Page of the application, a random quote is displayed with a missing word. You are to enter in the missing word. You can also, generate a new quote by clicking on the "Generate new quote" button.
+This is still a work in progress. Haven't finished the styling of the application. The purpose of building this application was to familiarise myself with React concepts.
 
 ## Deployed site Link
 
